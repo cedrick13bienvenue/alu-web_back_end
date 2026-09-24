@@ -9,6 +9,7 @@ program. Each project lives in its own top-level directory with its own
 | Directory | Project |
 | --- | --- |
 | [`python_variable_annotations`](./python_variable_annotations) | Python 3 type annotations: function signatures, variable types, duck typing, and validating code with `mypy` |
+| [`python_async_function`](./python_async_function) | Asynchronous Python: `async`/`await`, concurrent coroutines, and `asyncio` tasks |
 
 More projects will be added here as new directories as the program progresses.
 

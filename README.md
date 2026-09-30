@@ -12,6 +12,7 @@ program. Each project lives in its own top-level directory with its own
 | [`python_async_function`](./python_async_function) | Asynchronous Python: `async`/`await`, concurrent coroutines, and `asyncio` tasks |
 | [`python_async_comprehension`](./python_async_comprehension) | Async generators, async comprehensions, and type-annotating generators |
 | [`pagination`](./pagination) | REST API pagination: simple, hypermedia, and deletion-resilient |
+| [`personal_data`](./personal_data) | PII-safe logging, database credentials via environment variables, and bcrypt password hashing |
 
 More projects will be added here as new directories as the program progresses.
 

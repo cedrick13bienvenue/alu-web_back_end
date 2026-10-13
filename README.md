@@ -13,6 +13,7 @@ program. Each project lives in its own top-level directory with its own
 | [`python_async_comprehension`](./python_async_comprehension) | Async generators, async comprehensions, and type-annotating generators |
 | [`pagination`](./pagination) | REST API pagination: simple, hypermedia, and deletion-resilient |
 | [`personal_data`](./personal_data) | PII-safe logging, database credentials via environment variables, and bcrypt password hashing |
+| [`Unittests_and_integration_tests`](./Unittests_and_integration_tests) | Unit and integration testing: mocking, `parameterized`, fixtures, and a full `unittest.mock.patch`-based GithubOrgClient test suite |
 
 More projects will be added here as new directories as the program progresses.
 

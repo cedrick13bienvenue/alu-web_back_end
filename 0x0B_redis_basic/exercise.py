@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module that defines a Redis-backed Cache class with call counting."""
+"""Module that defines a Redis-backed Cache class with call tracking."""
 from functools import wraps
 from typing import Callable, Optional, Union
 import uuid
@@ -16,6 +16,22 @@ def count_calls(method: Callable) -> Callable:
     return wrapper
 
 
+def call_history(method: Callable) -> Callable:
+    """Store the input arguments and output of each call to a method."""
+    @wraps(method)
+    def wrapper(self, *args, **kwargs):
+        """Record this call's inputs and output in Redis lists."""
+        input_key = "{}:inputs".format(method.__qualname__)
+        output_key = "{}:outputs".format(method.__qualname__)
+
+        self._redis.rpush(input_key, str(args))
+        output = method(self, *args, **kwargs)
+        self._redis.rpush(output_key, str(output))
+
+        return output
+    return wrapper
+
+
 class Cache:
     """A thin wrapper around Redis for storing and retrieving data."""
 
@@ -25,6 +41,7 @@ class Cache:
         self._redis.flushdb()
 
     @count_calls
+    @call_history
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """Store data under a random key and return that key."""
         key = str(uuid.uuid4())

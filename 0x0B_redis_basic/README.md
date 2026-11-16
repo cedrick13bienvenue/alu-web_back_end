@@ -31,3 +31,22 @@ pip3 install redis
 sed -i "s/bind .*/bind 127.0.0.1/g" /etc/redis/redis.conf
 service redis-server start
 ```
+
+## Tasks
+| Feature | Description |
+| --- | --- |
+| `Cache.__init__`/`Cache.store` | Connects to Redis, flushes old data, and stores a value under a random UUID key |
+| `Cache.get`/`get_str`/`get_int` | Reads a value back from Redis, optionally converting it with a callable |
+| `count_calls` | Decorator: counts how many times a method has been called, keyed by its qualified name |
+| `call_history` | Decorator: records every call's input arguments and return value in Redis lists |
+| `replay` | Prints the recorded call history of a decorated method |
+
+## Usage
+```
+python3 -c '
+Cache = __import__("exercise").Cache
+cache = Cache()
+key = cache.store("hello")
+print(cache.get_str(key))
+'
+```

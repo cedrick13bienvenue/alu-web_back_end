@@ -16,10 +16,12 @@ program. Each project lives in its own top-level directory with its own
 | [`Unittests_and_integration_tests`](./Unittests_and_integration_tests) | Unit and integration testing: mocking, `parameterized`, fixtures, and a full `unittest.mock.patch`-based GithubOrgClient test suite |
 | [`i18n`](./i18n) | Flask internationalization with Flask-Babel: locale/timezone selection from URL params, user settings, and request headers |
 | [`0x0B_redis_basic`](./0x0B_redis_basic) | A Redis-backed cache with call counting, call history, and replay, via decorators |
+| [`MySQL_Advanced`](./MySQL_Advanced) | Constraints, triggers, stored procedures/functions, views, and indexes in MySQL |
 
 More projects will be added here as new directories as the program progresses.
 
 ## Conventions
 - Python files target Python 3.7 on Ubuntu 18.04 LTS, start with `#!/usr/bin/env python3`, follow `pycodestyle`, and are executable.
+- SQL files target MySQL 5.7 on Ubuntu 18.04 LTS, start with a comment describing the task, and use uppercase SQL keywords.
 - Every module, class, and function is documented with a real docstring.
 - Each project directory contains its own `README.md` with task-specific details.

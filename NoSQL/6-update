@@ -1,0 +1,6 @@
+// adds an address attribute to every document with name "ALX"
+db.school.update(
+    { name: "ALX" },
+    { $set: { address: "972 Mission street" } },
+    { multi: true }
+)

@@ -18,6 +18,7 @@ program. Each project lives in its own top-level directory with its own
 | [`0x0B_redis_basic`](./0x0B_redis_basic) | A Redis-backed cache with call counting, call history, and replay, via decorators |
 | [`MySQL_Advanced`](./MySQL_Advanced) | Constraints, triggers, stored procedures/functions, views, and indexes in MySQL |
 | [`NoSQL`](./NoSQL) | MongoDB CRUD via shell scripts and PyMongo, plus an Nginx log stats aggregation |
+| [`ES6_basic`](./ES6_basic) | ES6 syntax: const/let, arrow functions, default/rest/spread params, template literals |
 
 More projects will be added here as new directories as the program progresses.
 

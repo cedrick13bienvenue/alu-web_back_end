@@ -22,7 +22,6 @@ module.exports = {
     'no-plusplus': 'off',
     'no-unused-vars': ['error', { argsIgnorePattern: 'res|next|^err' }],
     'max-classes-per-file': 'off',
-    'import/extensions': ['error', 'ignorePackages', { js: 'always' }],
     'no-shadow': 'off',
     'no-param-reassign': ['error', { props: false }],
   },

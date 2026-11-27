@@ -21,6 +21,7 @@ program. Each project lives in its own top-level directory with its own
 | [`ES6_basic`](./ES6_basic) | ES6 syntax: const/let, arrow functions, default/rest/spread params, template literals |
 | [`ES6_promise`](./ES6_promise) | ES6 Promises: then/catch/finally, Promise.all/allSettled/race, throw/try/catch |
 | [`ES6_classes`](./ES6_classes) | ES6 classes: getters/setters, static methods, inheritance, and metaprogramming with symbols |
+| [`ES6_data_manipulation`](./ES6_data_manipulation) | Arrays with map/filter/reduce, typed arrays, and the Set and Map data structures |
 
 More projects will be added here as new directories as the program progresses.
 
